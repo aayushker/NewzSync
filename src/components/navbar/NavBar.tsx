@@ -1,7 +1,6 @@
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
-//import {AcmeLogo} from "./AcmeLogo.jsx";
-//import {SearchIcon} from "./SearchIcon.jsx";
+import {SearchIcon} from "./SearchIcon";
 
 export default function NavBar() {
   return (
@@ -9,8 +8,7 @@ export default function NavBar() {
         <NavbarContent className="items-center">
             <NavbarContent justify="start">
                 <NavbarBrand className="mr-4">
-                {/* <AcmeLogo /> */}
-                <p className="hidden sm:block font-bold text-inherit">ACME</p>
+                <p className="hidden sm:block font-bold text-inherit">NewzSync</p>
                 </NavbarBrand>
                 <NavbarContent className="hidden sm:flex gap-3">
                 <NavbarItem>
@@ -41,7 +39,7 @@ export default function NavBar() {
                 }}
                 placeholder="Type to search..."
                 size="sm"
-                //   startContent={<SearchIcon size={18} />}
+                startContent={<SearchIcon size={18} />}
                 type="search"
                 />
                 <NavbarContent>
