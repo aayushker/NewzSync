@@ -7,7 +7,10 @@ const index = () => {
   return (
     <main>
         <NavBar />
-        <News />
+        <div className='px-12'>
+           <News /> 
+        </div>
+        
     </main>
   )
 }
