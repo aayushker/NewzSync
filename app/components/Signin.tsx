@@ -1,13 +1,24 @@
 import React from 'react'
-import { signIn } from 'next-auth/react'
+import { getProviders, signIn } from 'next-auth/react'
 import { Button } from '@nextui-org/react'
 
-const Signin = () => {
+export default function Signin({ providers }: { providers: any }) {
   return (
     <>
-      <Button onClick={() => signIn('google')}>Sign in with Google</Button>
+      {Object.values(providers).map((provider: any) => (
+        <div key={provider.name}>
+          <button onClick={() => signIn(provider.id)}>
+            Sign in with {provider.name}
+          </button>
+        </div>
+      ))}
     </>
   )
 }
 
-export default Signin
+export async function getServerSideProps() {
+  const providers = await getProviders();
+  return {
+    props: { providers },
+  };
+}
