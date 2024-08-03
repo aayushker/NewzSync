@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next-auth/firebase-adapter": "^2.0.1",
     "@nextui-org/react": "^2.4.6",
     "@tabler/icons-react": "^3.11.0",
     "axios": "^1.7.3",
+    "firebase": "^10.12.5",
     "framer-motion": "^11.3.21",
     "next": "14.2.5",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18"
   },
